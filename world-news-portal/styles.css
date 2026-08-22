@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    
+    /* Premium Warm Light Theme Colors (Editorial - Default) */
+    --bg-primary: #FAF9F5;
+    --bg-secondary: #F3ECE0;
+    --bg-card: #FFFFFF;
+    --text-primary: #1C1A17;
+    --text-secondary: #5A544A;
+    --text-muted: #8F8677;
+    --border-color: #E6DFD3;
+    --accent: #B22222; /* Crimson Red */
+    --accent-hover: #8B0000;
+    --accent-light: #FCE8E6;
+}
+
+[data-theme="editorial"] {
+    --bg-primary: #FAF9F5;
+    --bg-secondary: #F3ECE0;
+    --bg-card: #FFFFFF;
+    --text-primary: #1C1A17;
+    --text-secondary: #5A544A;
+    --text-muted: #8F8677;
+    --border-color: #E6DFD3;
+    --accent: #B22222;
+    --accent-hover: #8B0000;
+    --accent-light: #FCE8E6;
+}
+
+[data-theme="midnight"] {
+    /* Sophisticated Editorial Dark Theme Colors */
+    --bg-primary: #0F0F0E;
+    --bg-secondary: #181715;
+    --bg-card: #1D1C1A;
+    --text-primary: #EBEAE4;
+    --text-secondary: #B0ADA6;
+    --text-muted: #7E7B74;
+    --border-color: #33312E;
+    --accent: #E55B5B; /* Vibrant Coral Crimson */
+    --accent-hover: #FF8585;
+    --accent-light: #3D2323;
+}
+
+[data-theme="forest"] {
+    /* Deep Moss Green Dark Theme */
+    --bg-primary: #111814;
+    --bg-secondary: #1A221E;
+    --bg-card: #1F2B25;
+    --text-primary: #E2ECE6;
+    --text-secondary: #A3BCA9;
+    --text-muted: #748D7A;
+    --border-color: #273A30;
+    --accent: #48C774; /* Vivid Green */
+    --accent-hover: #63E48F;
+    --accent-light: #182C22;
+}
+
+[data-theme="royal"] {
+    /* Royal Purple/Plum & Gold Theme */
+    --bg-primary: #15101A;
+    --bg-secondary: #1F1928;
+    --bg-card: #271E32;
+    --text-primary: #F0EAF5;
+    --text-secondary: #C7BAD4;
+    --text-muted: #9382A3;
+    --border-color: #382A48;
+    --accent: #D4AF37; /* Gold Accent */
+    --accent-hover: #F3E5AB;
+    --accent-light: #2D1E3A;
+}
+
+[data-theme="vintage"] {
+    /* Warm Sepia Print Theme */
+    --bg-primary: #F4EEDF;
+    --bg-secondary: #E5DAC2;
+    --bg-card: #FAF6ED;
+    --text-primary: #2C2419;
+    --text-secondary: #60533E;
+    --text-muted: #928369;
+    --border-color: #D6C8AA;
+    --accent: #C77A23; /* Bronze Amber */
+    --accent-hover: #9E5D17;
+    --accent-light: #FAF0DC;
+}
+
+[data-theme="ocean"] {
+    /* Navy Blue & Sky Cyan Theme */
+    --bg-primary: #0A1128;
+    --bg-secondary: #121F45;
+    --bg-card: #1A2A5E;
+    --text-primary: #E1E8F5;
+    --text-secondary: #9AA7CB;
+    --text-muted: #7583A8;
+    --border-color: #263878;
+    --accent: #00B4D8; /* Bright Cyan */
+    --accent-hover: #90E0EF;
+    --accent-light: #0D2C54;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+h1, h2, h3, h4, h5, h6, .editorial-title {
+    font-family: var(--font-serif);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--text-muted);
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+
+/* Background paper texture dots pattern */
+.bg-paper-texture {
+    background-image: radial-gradient(var(--border-color) 1.2px, transparent 1.2px);
+    background-size: 28px 28px;
+    opacity: 0.25;
+    pointer-events: none;
+    transition: background-image 0.4s ease;
+}
+
+/* Glowing background orbs */
+.bg-glow-orb {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--accent-light) 0%, transparent 70%);
+    filter: blur(65px);
+    opacity: 0.45;
+    pointer-events: none;
+    z-index: 0;
+    transition: background 0.8s ease;
+}
+
+.orb-1 {
+    top: 10%;
+    left: -15%;
+    animation: floatOrb 28s ease-in-out infinite alternate;
+}
+
+.orb-2 {
+    top: 55%;
+    right: -15%;
+    animation: floatOrb 32s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes floatOrb {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        transform: translate(80px, -60px) scale(1.15);
+    }
+    100% {
+        transform: translate(-40px, 90px) scale(0.9);
+    }
+}
+
+/* Bento Grid Card Specific Styles */
+.bento-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    position: relative;
+    z-index: 10;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.bento-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.12);
+    border-color: var(--accent);
+}
+
+.bento-card:hover h3, .bento-card:hover h4 {
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-underline-offset: 4px;
+}
+
+/* Editorial Masthead Double Borders */
+.editorial-masthead {
+    border-top: 4px double var(--border-color);
+    border-bottom: 4px double var(--border-color);
+    transition: border-color 0.4s ease;
+}
+
+/* Breaking news banner marquee effect */
+@keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+}
+
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: marquee 25s linear infinite;
+}
+
+.marquee-content:hover {
+    animation-play-state: paused;
+}
+
+/* Immersive reading view custom classes */
+.zen-content {
+    font-size: 1.2rem;
+    line-height: 1.85;
+    font-family: var(--font-serif);
+}
+
+.zen-content p {
+    margin-bottom: 1.5rem;
+    text-indent: 1.5rem;
+}
+
+.zen-content p:first-of-type {
+    text-indent: 0;
+}
+
+.zen-content p:first-of-type::first-letter {
+    font-family: var(--font-serif);
+    float: left;
+    font-size: 4.2rem;
+    line-height: 0.85;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+/* Theme Switcher custom styles */
+.theme-toggle-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glassmorphism overlays */
+.glass-overlay {
+    background: rgba(26, 26, 26, 0.05);
+    backdrop-filter: blur(8px);
+}
+
+/* Theme-Dependent Dynamic Class Utilities */
+.theme-bg-primary {
+    background-color: var(--bg-primary) !important;
+    transition: background-color 0.4s ease;
+}
+.theme-bg-secondary {
+    background-color: var(--bg-secondary) !important;
+    transition: background-color 0.4s ease;
+}
+.theme-bg-card {
+    background-color: var(--bg-card) !important;
+    transition: background-color 0.4s ease;
+}
+.theme-text-primary {
+    color: var(--text-primary) !important;
+    transition: color 0.4s ease;
+}
+.theme-text-secondary {
+    color: var(--text-secondary) !important;
+    transition: color 0.4s ease;
+}
+.theme-text-muted {
+    color: var(--text-muted) !important;
+    transition: color 0.4s ease;
+}
+.theme-border {
+    border-color: var(--border-color) !important;
+    transition: border-color 0.4s ease;
+}
+.theme-accent {
+    color: var(--accent) !important;
+    transition: color 0.4s ease;
+}
+.theme-bg-accent {
+    background-color: var(--accent) !important;
+    transition: background-color 0.4s ease;
+}
+.theme-bg-accent-hover:hover {
+    background-color: var(--accent-hover) !important;
+}
+.theme-bg-accent-light {
+    background-color: var(--accent-light) !important;
+    transition: background-color 0.4s ease;
+}
+
+/* Theme picker popover option cards */
+.theme-swatch {
+    transition: transform 0.2s ease, shadow 0.2s ease;
+}
+.theme-swatch:hover {
+    transform: scale(1.08);
+}
+.theme-swatch.active {
+    box-shadow: 0 0 0 2px var(--accent);
+}
+
+/* Equalizer soundwave visualizer bars */
+.sound-bar {
+    animation: bounceBar 0.8s ease-in-out infinite alternate;
+}
+.sound-bar:nth-child(2) { animation-delay: 0.15s; }
+.sound-bar:nth-child(3) { animation-delay: 0.3s; }
+.sound-bar:nth-child(4) { animation-delay: 0.05s; }
+.sound-bar:nth-child(5) { animation-delay: 0.2s; }
+
+@keyframes bounceBar {
+    0% { height: 4px; }
+    100% { height: 18px; }
+}
+
+/* Staggered card fade-in animation */
+.card-fade-in {
+    opacity: 0;
+    transform: translateY(15px);
+    animation: cardLoad 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes cardLoad {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slider dynamic slide-in toast notifications */
+.toast-notification {
+    animation: toastSlideIn 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes toastSlideIn {
+    0% {
+        transform: translateX(120%) scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+/* Stock price update flash indicators */
+.stock-up-flash {
+    animation: greenFlash 1.5s ease-out;
+}
+.stock-down-flash {
+    animation: redFlash 1.5s ease-out;
+}
+
+@keyframes greenFlash {
+    0% { background-color: rgba(16, 185, 129, 0.3); }
+    100% { background-color: transparent; }
+}
+
+@keyframes redFlash {
+    0% { background-color: rgba(239, 68, 68, 0.3); }
+    100% { background-color: transparent; }
+}
