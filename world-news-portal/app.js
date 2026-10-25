@@ -15,7 +15,7 @@ const articles = [
         featured: true // To render as the large Bento hero
     },
     {
-        id: 2,
+        id : 2,
         title: "Global Summit Agrees on New Carbon Taxation Framework for Multinationals",
         summary: "In a historic resolution, 140 nations have signed the Geneva Accord, introducing a standardized minimum carbon tariff on cross-border logistics and manufacturing.",
         content: "GENEVA — In what diplomats are calling the most significant climate policy breakthrough since the Paris Agreement, representatives from 140 nations today finalized the Geneva Climate Accord. The pact introduces a sweeping, standardized minimum carbon tariff aimed at major multinational corporations.\n\nThe negotiations, which lasted over three weeks, were marked by fierce debates between industrial superpowers and developing nations. The agreement mandates that companies accounting for carbon footprints beyond a specified threshold will face a minimum 12% border tax when exporting goods to signatory countries.\n\nDr. Elena Vance, chief policy director at the Global Climate Coalition, hailed the accord: 'This removes the incentive for carbon leakage. Companies can no longer simply move their factories to countries with weaker environmental regulations.'\n\nCritics, however, warn of potential inflationary impacts. Global supply chain leaders anticipate a short-term rise in consumer electronics and automotive prices as companies adjust to the taxation structures. Implementation is scheduled to begin in phases starting next winter, with full enforcement expected by the end of the decade.",
