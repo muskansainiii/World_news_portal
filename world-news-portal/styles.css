@@ -173,7 +173,6 @@ h1, h2, h3, h4, h5, h6, .editorial-title {
         transform: translate(-40px, 90px) scale(0.9);
     }
 }
-
 /* Bento Grid Card Specific Styles */
 .bento-card {
     background-color: var(--bg-card);
@@ -182,19 +181,16 @@ h1, h2, h3, h4, h5, h6, .editorial-title {
     z-index: 10;
     transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
-
 .bento-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.12);
     border-color: var(--accent);
 }
-
 .bento-card:hover h3, .bento-card:hover h4 {
     text-decoration: underline;
     text-decoration-color: var(--accent);
     text-underline-offset: 4px;
 }
-
 /* Editorial Masthead Double Borders */
 .editorial-masthead {
     border-top: 4px double var(--border-color);
@@ -331,7 +327,6 @@ h1, h2, h3, h4, h5, h6, .editorial-title {
     0% { height: 4px; }
     100% { height: 18px; }
 }
-
 /* Staggered card fade-in animation */
 .card-fade-in {
     opacity: 0;
@@ -345,7 +340,6 @@ h1, h2, h3, h4, h5, h6, .editorial-title {
         transform: translateY(0);
     }
 }
-
 /* Slider dynamic slide-in toast notifications */
 .toast-notification {
     animation: toastSlideIn 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
