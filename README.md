@@ -1,7 +1,5 @@
 # The Global Monitor | Premium World News Redesign
-
 An elegant, interactive, and highly professional World News Portal redesign concept inspired by Hindustan Times World News stream data. 
-
 This portal moves away from standard cluttered news layouts towards a high-end, responsive Bento Grid editorial design. It supports multiple premium themes, reader personalization, dynamic widgets, and live interactions.
 
 ## 🌟 Key Features
@@ -37,11 +35,7 @@ world-news-portal/
 ## 🚀 How to Run
 
 Since the application is built on top of standard native web languages, **no installation or local compilation is required**.
-
-### Option 1: Direct File Launch
-Double-click on [index.html](file:///C:/Users/Muskan%20saini/.gemini/antigravity/scratch/world-news-portal/index.html) to open the dashboard directly in Google Chrome, Microsoft Edge, Mozilla Firefox, Safari, or Brave.
-
-### Option 2: Run Local Python Server
+Run Local Python Server
 If you want to simulate server behavior, open your terminal/PowerShell inside the project root and run:
 ```powershell
 python -m http.server 8000
